@@ -49,7 +49,6 @@ export default function Component() {
           <Label>Additional Notes</Label>
           <ul className="space-y-2 text-sm">
             <li>Burp infant during and after feedings</li>
-            <li>Keep feedings calm and consistent</li>
             <li>Watch for hunger cues</li>
           </ul>
         </div>
