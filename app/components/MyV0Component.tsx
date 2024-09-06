@@ -1,62 +1,59 @@
-// you can overwrite this entire file with your v0 Component.
-// just copy and paste the "React" output over the entire file.
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/B9BwkPnnkQO
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+import { Label } from "@/components/ui/label"
+import { Separator } from "@/components/ui/separator"
 
-import Link from "next/link";
-import React from "react";
-import {V0Logo} from "./symbols";
-
-function TestComponent() {
+export default function Component() {
   return (
-    <div
-      style={{
-        display: "flex",
-        height: "100%",
-        justifyContent: "space-between",
-        flexDirection: "column",
-        width: "100%",
-      }}
-    >
-      <h3
-        style={{
-          maxWidth: "11em",
-        }}
-      >
-        This would be a pretty good place for a{" "}
-        <Link href="https://v0.dev/" target="_blank" rel="noopener noreferrer">
-          v0 component
-        </Link>
-        , wouldn't it?
-      </h3>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-end",
-          width: "100%",
-        }}
-      >
-        <p
-          style={{
-            maxWidth: "20em",
-          }}
-        >
-          Go make one, then paste it into{" "}
-          <code
-            style={{
-              fontFamily: "var(--font-geist-mono)",
-              fontWeight: 500,
-              fontSize: "0.95em",
-              fontFeatureSettings: "'ss09'",
-            }}
-          >
-            app/components/MyV0Component.tsx
-          </code>
-        </p>
-
-        <V0Logo />
-      </div>
-    </div>
-  );
+    <Card className="w-full max-w-2xl">
+      <CardHeader>
+        <CardTitle>Daily Feeding Schedule</CardTitle>
+        <CardDescription>Customized for your infant's needs</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-6">
+        <div className="grid gap-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label>Feeding Times</Label>
+              <ul className="space-y-2 text-sm">
+                <li>6:00 AM</li>
+                <li>9:00 AM</li>
+                <li>12:00 PM</li>
+                <li>3:00 PM</li>
+                <li>6:00 PM</li>
+                <li>9:00 PM</li>
+              </ul>
+            </div>
+            <div>
+              <Label>Feeding Duration</Label>
+              <p className="text-sm">20-30 minutes per feeding</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <Label>Feeding Amounts</Label>
+              <p className="text-sm">4-6 oz per feeding, adjusting based on infant's age and needs</p>
+            </div>
+            <div>
+              <Label>Feeding Type</Label>
+              <p className="text-sm">Breastmilk or formula, or a combination</p>
+            </div>
+          </div>
+        </div>
+        <Separator />
+        <div className="grid gap-2">
+          <Label>Additional Notes</Label>
+          <ul className="space-y-2 text-sm">
+            <li>Burp infant during and after feedings</li>
+            <li>Keep feedings calm and consistent</li>
+            <li>Watch for hunger cues</li>
+          </ul>
+        </div>
+      </CardContent>
+    </Card>
+  )
 }
-
-export default TestComponent;
